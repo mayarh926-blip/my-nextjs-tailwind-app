@@ -1,66 +1,34 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
-
 const servicesCopy = {
-  en: {
-    tag: "What we do",
-    title: "A holistic partner from insight to launch.",
-    description:
-      "We assemble small, senior squads for each project, blending strategy, product, content, and code. Everything stays integrated, fast, and intentional.",
-    services: [
-      {
-        title: "Product Strategy",
-        description:
-          "Discovery sprints, customer interviews, and prototype testing to validate the right thing before we build it.",
-        stack: ["Notion", "Figma", "Maze"],
-      },
-      {
-        title: "Experience Design",
-        description:
-          "Design systems, responsive interfaces, motion language, and storytelling that stays cohesive across every device.",
-        stack: ["Figma", "Framer", "After Effects"],
-      },
-      {
-        title: "Engineering",
-        description:
-          "Full-stack web apps built with TypeScript, Next.js, and edge-ready APIs, optimized for performance and accessibility.",
-        stack: ["Next.js", "Tailwind", "Vercel", "Supabase"],
-      },
-    ],
-  },
-  ar: {
-    tag: "ماذا نفعل",
-    title: "شريك متكامل من الفكرة إلى الإطلاق.",
-    description:
-      "نكوّن فرقاً صغيرة من الخبراء لكل مشروع، نمزج الاستراتيجية والمنتج والمحتوى والبرمجة لنضمن عملاً سريعاً ومقصوداً.",
-    services: [
-      {
-        title: "إستراتيجية المنتج",
-        description:
-          "أسابيع اكتشاف ومقابلات مع العملاء واختبارات للنماذج الأولية للتأكد من بناء الشيء الصحيح قبل كتابة أي سطر.",
-        stack: ["Notion", "Figma", "Maze"],
-      },
-      {
-        title: "تصميم التجربة",
-        description:
-          "أنظمة تصميم وواجهات مرنة ولغة حركة وقصص متماسكة عبر كل الأجهزة.",
-        stack: ["Figma", "Framer", "After Effects"],
-      },
-      {
-        title: "الهندسة",
-        description:
-          "تطبيقات ويب متكاملة بـ TypeScript وNext.js وواجهات برمجة جاهزة للحافة مع أداء وإتاحة عاليين.",
-        stack: ["Next.js", "Tailwind", "Vercel", "Supabase"],
-      },
-    ],
-  },
+  tag: "ماذا نفعل",
+  title: "شريك متكامل من الفكرة إلى الإطلاق.",
+  description:
+    "نكوّن فرقاً صغيرة من الخبراء لكل مشروع، نمزج الاستراتيجية والمنتج والمحتوى والبرمجة لنضمن عملاً سريعاً ومقصوداً.",
+  services: [
+    {
+      title: "إستراتيجية المنتج",
+      description:
+        "أسابيع اكتشاف ومقابلات مع العملاء واختبارات للنماذج الأولية للتأكد من بناء الشيء الصحيح قبل كتابة أي سطر.",
+      stack: ["Notion", "Figma", "Maze"],
+    },
+    {
+      title: "تصميم التجربة",
+      description:
+        "أنظمة تصميم وواجهات مرنة ولغة حركة وقصص متماسكة عبر كل الأجهزة.",
+      stack: ["Figma", "Framer", "After Effects"],
+    },
+    {
+      title: "الهندسة",
+      description:
+        "تطبيقات ويب متكاملة بـ TypeScript وNext.js وواجهات برمجة جاهزة للحافة مع أداء وإتاحة عاليين.",
+      stack: ["Next.js", "Tailwind", "Vercel", "Supabase"],
+    },
+  ],
 };
 
 export default function ServicesPage() {
-  const { language } = useLanguage();
-  const content = servicesCopy[language];
-
+  const content = servicesCopy;
   return (
     <div className="space-y-10">
       <header className="space-y-4">

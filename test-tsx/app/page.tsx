@@ -1,82 +1,42 @@
 "use client";
 
-import { useLanguage } from "./context/LanguageContext";
-
 const heroCopy = {
-  en: {
-    tag: "Future-ready studio",
-    heroTitlePre: "Crafting digital experiences that feel",
-    heroHighlight: "alive",
-    heroTitlePost: "",
-    heroDescription:
-      "We blend strategy, design, and engineering to build bold products people love to use. From brand storytelling to complex platforms, Mayar Studio keeps everything polished and human.",
-    primaryCta: "Explore services",
-    secondaryCta: "Book a call",
-    deliverTitle: "What we deliver",
-    deliverItems: [
-      "Responsive brand systems & identity design",
-      "Product strategy, prototyping, and validation",
-      "Full-stack engineering with performance focus",
-      "Growth experiments and ongoing optimization",
-    ],
-    cards: [
-      {
-        title: "Research-first",
-        description:
-          "We listen deeply, study your audience, and uncover the sharpest insight before designing a single pixel.",
-      },
-      {
-        title: "Design systems",
-        description:
-          "Cohesive UI libraries, token-driven styling, and motion principles that scale across every touchpoint.",
-      },
-      {
-        title: "Technology craft",
-        description:
-          "Modern stacks, accessible experiences, and measurable performance baked into every release.",
-      },
-    ],
-  },
-  ar: {
-    tag: "استوديو يصنع المستقبل",
-    heroTitlePre: "نبتكر تجارب رقمية تبدو",
-    heroHighlight: "نابضة بالحياة",
-    heroTitlePost: "",
-    heroDescription:
-      "نمزج بين الإستراتيجية والتصميم والهندسة لنصنع منتجات جريئة يحبها الناس. من بناء الهوية إلى المنصات المعقدة، نحافظ في Mayar Studio على كل التفاصيل أنيقة وقريبة من الإنسان.",
-    primaryCta: "استكشف الخدمات",
-    secondaryCta: "احجز مكالمة",
-    deliverTitle: "ماذا نقدم",
-    deliverItems: [
-      "أنظمة هوية واستجابات بصرية متكاملة",
-      "إستراتيجية منتج ونماذج أولية واختبار مبكر",
-      "هندسة شاملة مع تركيز على الأداء",
-      "تجارب نمو مستمرة وتحسينات قابلة للقياس",
-    ],
-    cards: [
-      {
-        title: "البحث أولاً",
-        description:
-          "نستمع بعمق وندرس جمهورك لنكتشف أوضح الأفكار قبل تصميم أي تفصيلة.",
-      },
-      {
-        title: "أنظمة تصميم",
-        description:
-          "مكتبات واجهات متماسكة، وأنماط تعتمد على الرموز، وحركة منظمة عبر كل نقاط الاتصال.",
-      },
-      {
-        title: "هندسة دقيقة",
-        description:
-          "مكدسات حديثة وتجارب يسهل الوصول إليها، مع أداء يمكن الاعتماد عليه في كل إطلاق.",
-      },
-    ],
-  },
+  tag: "استوديو يصنع المستقبل",
+  heroTitlePre: "نبتكر تجارب رقمية تبدو",
+  heroHighlight: "نابضة بالحياة",
+  heroTitlePost: "",
+  heroDescription:
+    "نمزج بين الإستراتيجية والتصميم والهندسة لنصنع منتجات جريئة يحبها الناس. من بناء الهوية إلى المنصات المعقدة، نحافظ في Mayar Studio على كل التفاصيل أنيقة وقريبة من الإنسان.",
+  primaryCta: "استكشف الخدمات",
+  secondaryCta: "احجز مكالمة",
+  deliverTitle: "ماذا نقدم",
+  deliverItems: [
+    "أنظمة هوية واستجابات بصرية متكاملة",
+    "إستراتيجية منتج ونماذج أولية واختبار مبكر",
+    "هندسة شاملة مع تركيز على الأداء",
+    "تجارب نمو مستمرة وتحسينات قابلة للقياس",
+  ],
+  cards: [
+    {
+      title: "البحث أولاً",
+      description:
+        "نستمع بعمق وندرس جمهورك لنكتشف أوضح الأفكار قبل تصميم أي تفصيلة.",
+    },
+    {
+      title: "أنظمة تصميم",
+      description:
+        "مكتبات واجهات متماسكة، وأنماط تعتمد على الرموز، وحركة منظمة عبر كل نقاط الاتصال.",
+    },
+    {
+      title: "هندسة دقيقة",
+      description:
+        "مكدسات حديثة وتجارب يسهل الوصول إليها، مع أداء يمكن الاعتماد عليه في كل إطلاق.",
+    },
+  ],
 };
 
 export default function Home() {
-  const { language } = useLanguage();
-  const copy = heroCopy[language];
-
+  const copy = heroCopy;
   return (
     <div className="space-y-16">
       <section className="grid gap-10 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 via-slate-900/40 to-cyan-900/30 p-6 shadow-2xl shadow-cyan-500/10 sm:p-10 md:grid-cols-[1.1fr_0.9fr]">

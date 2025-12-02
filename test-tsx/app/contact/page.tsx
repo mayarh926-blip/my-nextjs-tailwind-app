@@ -1,60 +1,31 @@
 "use client";
 
-import { useLanguage } from "../context/LanguageContext";
-
 const contactCopy = {
-  en: {
-    tag: "Contact",
-    title: "Tell us about the product you want to build.",
-    description:
-      "We partner with teams that love experimentation, value design, and want to launch with confidence. Share a little about your timeline and goals and we’ll reply within two business days.",
-    fields: {
-      name: "Full name",
-      namePlaceholder: "Mayar Hassan",
-      email: "Email",
-      emailPlaceholder: "hello@mayar.studio",
-      project: "What are you building?",
-      projectPlaceholder:
-        "Share product goals, tech stack, and launch timing...",
-      submit: "Send message",
-    },
-    sidebar: {
-      hoursLabel: "Studio hours",
-      hoursValue: "Mon – Fri, 9am to 6pm GMT+2",
-      emailLabel: "Email",
-      socialLabel: "Social",
-      socialLinks: ["Behance", "Dribbble", "LinkedIn"],
-    },
+  tag: "تواصل معنا",
+  title: "أخبرنا عن المنتج الذي تريد بناءه.",
+  description:
+    "نتعاون مع الفرق التي تحب التجربة وتقدّر التصميم وتبحث عن إطلاق واثق. شاركنا خطك الزمني وأهدافك وسنرد خلال يومي عمل.",
+  fields: {
+    name: "الاسم الكامل",
+    namePlaceholder: "ميار حسن",
+    email: "البريد الإلكتروني",
+    emailPlaceholder: "hello@mayar.studio",
+    project: "ما الذي تبنيه؟",
+    projectPlaceholder:
+      "شارك أهداف المنتج، والتقنيات، وموعد الإطلاق المتوقع...",
+    submit: "أرسل الرسالة",
   },
-  ar: {
-    tag: "تواصل معنا",
-    title: "أخبرنا عن المنتج الذي تريد بناءه.",
-    description:
-      "نتعاون مع الفرق التي تحب التجربة وتقدّر التصميم وتبحث عن إطلاق واثق. شاركنا خطك الزمني وأهدافك وسنرد خلال يومي عمل.",
-    fields: {
-      name: "الاسم الكامل",
-      namePlaceholder: "ميار حسن",
-      email: "البريد الإلكتروني",
-      emailPlaceholder: "hello@mayar.studio",
-      project: "ما الذي تبنيه؟",
-      projectPlaceholder:
-        "شارك أهداف المنتج، والتقنيات، وموعد الإطلاق المتوقع...",
-      submit: "أرسل الرسالة",
-    },
-    sidebar: {
-      hoursLabel: "ساعات العمل",
-      hoursValue: "من الاثنين إلى الجمعة، 9 صباحاً حتى 6 مساءً بتوقيت +2",
-      emailLabel: "البريد",
-      socialLabel: "روابطنا",
-      socialLinks: ["Behance", "Dribbble", "LinkedIn"],
-    },
+  sidebar: {
+    hoursLabel: "ساعات العمل",
+    hoursValue: "من الاثنين إلى الجمعة، 9 صباحاً حتى 6 مساءً بتوقيت +2",
+    emailLabel: "البريد",
+    socialLabel: "روابطنا",
+    socialLinks: ["Behance", "Dribbble", "LinkedIn"],
   },
 };
 
 export default function ContactPage() {
-  const { language } = useLanguage();
-  const copy = contactCopy[language];
-
+  const copy = contactCopy;
   return (
     <div className="space-y-10">
       <header className="space-y-4">
